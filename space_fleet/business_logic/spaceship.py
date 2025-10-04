@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from uuid import UUID, uuid4
+from uuid import uuid4
 
 
 @dataclass()
@@ -8,7 +8,7 @@ class Spaceship:
                  name: str,
                  type_: str,
                  status: str = "available"):
-        self.spaceship_id: UUID = uuid4()
+        self.spaceship_id: str = str(uuid4())
         self.name = name
         self.type_ = type_  # research or combat
         self.status = status  # available, on mission, under repair
